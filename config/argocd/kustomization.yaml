@@ -3,3 +3,4 @@ resources:
   - testFlask-cicd-app.yaml
   - appdev-env.yaml
   - appprod-env.yaml
+  - appprod-env-testflask-app.yaml
