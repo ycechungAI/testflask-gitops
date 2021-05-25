@@ -1,0 +1,3 @@
+resources:
+  - testFlask-argo-app.yaml
+  - testFlask-cicd-app.yaml
