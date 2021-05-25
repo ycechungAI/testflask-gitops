@@ -10,14 +10,16 @@ resources:
   - 03-secrets/git-host-access-token.yaml
   - 03-secrets/git-host-basic-auth-token.yaml
   - 03-secrets/gitops-webhook-secret.yaml
-  - 03-secrets/webhook-secret-test-dev-taxi.yaml
+  - 03-secrets/webhook-secret-test-dev-testflask.yaml
   - 04-tasks/deploy-from-source-task.yaml
+  - 04-tasks/task-python-unittest.yaml
+  - 04-workspace/pipeline-pvc.yaml
   - 05-pipelines/app-ci-pipeline.yaml
   - 05-pipelines/ci-dryrun-from-push-pipeline.yaml
-  - 06-bindings/github-push-binding.yaml
-  - 06-bindings/test-dev-app-taxi-taxi-binding.yaml
-  - 07-templates/app-ci-build-from-push-template.yaml
-  - 07-templates/ci-dryrun-from-push-template.yaml
-  - 08-eventlisteners/cicd-event-listener.yaml
-  - 09-routes/gitops-webhook-event-listener.yaml
-  - 10-commit-status-tracker/operator.yaml
+  # - 06-bindings/github-push-binding.yaml
+  # - 06-bindings/test-dev-app-taxi-taxi-binding.yaml
+  # - 07-templates/app-ci-build-from-push-template.yaml
+  # - 07-templates/ci-dryrun-from-push-template.yaml
+  # - 08-eventlisteners/cicd-event-listener.yaml
+  # - 09-routes/gitops-webhook-event-listener.yaml
+  # - 10-commit-status-tracker/operator.yaml

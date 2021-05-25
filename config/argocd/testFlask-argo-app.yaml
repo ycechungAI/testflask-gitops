@@ -36,7 +36,7 @@ spec:
   project: default
   source:
     path: config/argocd
-    repoURL: https://github.com/MoOyeg/testFlask-Gitops.git
+    repoURL: https://github.com/MoOyeg/testflask-gitops.git
   syncPolicy:
     automated:
       prune: true

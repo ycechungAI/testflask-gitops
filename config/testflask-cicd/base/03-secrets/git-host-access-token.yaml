@@ -1,0 +1,15 @@
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  creationTimestamp: null
+  name: git-host-access-token
+  namespace: testflask-cicd
+spec:
+  encryptedData:
+    token: AgBB61WX6JKN+1hJAueXymCs+P3kGzRv4hra33HPFe9P6UBg5MKdt6RkvEcdf4BUH0vHiCpVDokwrKoWB0EGI72dzurEXk6qE+gwsDJto+NSXBpmMHrTOBoM7vtg2zjBd8Pm4E4FlCzcTkZhKxc9u4xX05QDaVgTsgqY7HRHgUw5qKjnoUuTI+1fqEuiP37nXJpwZt6HWqDZeUQ3+QaqIDQHixT+d/sXvunzVOMw9xXqMOm4x+NtZKKx4XUq5Cn0o0K3SJRihuTs+NrLvtKDaanfpztiWYxRVeHSJ89dMCuGz5wP30e8IDJ++qMgKZ2CuiuGFfaON0mhF4G4jKO5Hs2QP+LYyXSvGonx3FVVIbrmurgAJsE1NsIw5//0e8woCjUXRJ91bHpA9f6Yg+4UTr4VNdMEfOTlJ6aKDD2xF42z78T1TZugk6d0BiRvOL7JOxPXMQE3i4Os5Wogmc6tcD8PnHFMazt6a+6B7p9/xTW6QTiVw9es4fDotIXvBhN46a4UIA2EfbhNU3LjMFUYjuBINxSyRsOVesIKzk6MchA1oB9vwTvZ+CELPmlgbe6u5xOO+0GOTACXBDGK4GekAKA18XuIaLdrwDFdvQAQ5Lmz8PQhJJ+W2tqqGddRz6P7+O21PyXKSBajgatXcypeJu/TOyomLSjVgPSRyKKcF/PpiSFbP+bihTi2BwO62kHy71KxDxH47Yw8HyoKkJrOvmrt97PLVaETAPhTAHZWwt1Uj/TzW9JqoQOs
+  template:
+    metadata:
+      creationTimestamp: null
+      name: git-host-access-token
+      namespace: testflask-cicd
+    type: Opaque

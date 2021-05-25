@@ -35,8 +35,8 @@ spec:
       kind: SealedSecret
   project: default
   source:
-    path: config/testFlask-cicd/overlays
-    repoURL: https://github.com/MoOyeg/testFlask-Gitops.git
+    path: config/testflask-cicd/overlays
+    repoURL: https://github.com/MoOyeg/testflask-gitops.git
   syncPolicy:
     automated:
       prune: true
