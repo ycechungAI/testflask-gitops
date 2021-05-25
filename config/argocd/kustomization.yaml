@@ -1,3 +1,5 @@
 resources:
   - testFlask-argo-app.yaml
   - testFlask-cicd-app.yaml
+  - appdev-env.yaml
+  - appprod-env.yaml

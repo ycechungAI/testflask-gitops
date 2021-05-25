@@ -1,0 +1,3 @@
+resources:
+- appdev-environment.yaml
+- appdev-rolebinding.yaml

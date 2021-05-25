@@ -1,0 +1,27 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  creationTimestamp: null
+  name: appprod-env
+  namespace: openshift-gitops
+spec:
+  destination:
+    namespace: appprod
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: environments/appprod/env/overlays
+    repoURL: https://github.com/MoOyeg/testflask-gitops.git
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+status:
+  health: {}
+  summary: {}
+  sync:
+    comparedTo:
+      destination: {}
+      source:
+        repoURL: ""
+    status: ""
