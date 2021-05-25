@@ -1,2 +1,2 @@
-bases:
-- ../services/testflask
+ bases:
+ - ../services/testflask
