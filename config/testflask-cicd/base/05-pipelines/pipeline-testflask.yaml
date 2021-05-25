@@ -57,7 +57,7 @@ spec:
         name: git-clone
       workspaces:
         - name: output
-          workspace: ${TEKTON_PVC_NAME}
+          workspace: testflask-cicd-pvc
     - name: python-unittest
       params:
         - name: PYTHON
@@ -75,7 +75,7 @@ spec:
         name: python-unittest
       workspaces:
         - name: output
-          workspace: ${TEKTON_PVC_NAME}
+          workspace: testflask-cicd-pvc
     - name: s2i-build-code
       params:
         - name: VERSION
@@ -85,7 +85,7 @@ spec:
         - name: TLSVERIFY
           value: "false"
         - name: IMAGE
-          value: "image-registry.openshift-image-registry.svc:5000/${NAMESPACE_DEV}/${APP_NAME}"
+          value: "image-registry.openshift-image-registry.svc:5000/appdev/testflask"
       runAfter:
         - python-unittest
       taskRef:
@@ -93,7 +93,7 @@ spec:
         name: s2i-python
       workspaces:
         - name: source
-          workspace: ${TEKTON_PVC_NAME}
+          workspace: testflask-cicd-pvc
     - name: build-dev-env
       params:
         - name: SCRIPT
@@ -164,4 +164,4 @@ spec:
         kind: ClusterTask
         name: openshift-client
   workspaces:
-    - name: ${TEKTON_PVC_NAME}
+    - name: testflask-cicd-pvc

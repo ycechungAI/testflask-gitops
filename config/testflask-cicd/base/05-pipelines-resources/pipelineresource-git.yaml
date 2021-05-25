@@ -1,0 +1,12 @@
+apiVersion: tekton.dev/v1alpha1
+kind: PipelineResource
+metadata:
+  name: git-testflask
+  namespace: testflask-cicd
+spec:
+  params:
+    - name: url
+      value: https://github.com/MoOyeg/testFlask.git
+    - name: revision
+      value: master
+  type: git
