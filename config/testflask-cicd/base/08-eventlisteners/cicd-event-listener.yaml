@@ -1,0 +1,14 @@
+---
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: EventListener
+metadata:
+  name: testflask-listener
+  namespace: testflask-cicd
+spec:
+  serviceAccountName: pipeline
+  triggers:
+    - name: foo-trig
+      bindings:
+        - ref: github-push-binding
+      template:
+        ref: pipeline-template

@@ -14,7 +14,6 @@ resources:
   - 05-pipelines-resources/pipelineresource-git.yaml
   - 06-bindings/github-push-binding.yaml
   - 07-templates/app-ci-build-from-push-template.yaml
-  # - 07-templates/ci-dryrun-from-push-template.yaml
-  # - 08-eventlisteners/cicd-event-listener.yaml
-  # - 09-routes/gitops-webhook-event-listener.yaml
-  # - 10-commit-status-tracker/operator.yaml
+  - 08-eventlisteners/cicd-event-listener.yaml
+  - 09-routes/gitops-webhook-event-listener.yaml
+  - 10-commit-status-tracker/operator.yaml
