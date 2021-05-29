@@ -1,0 +1,11 @@
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  labels:
+    app: testflask
+  name: testflask
+  namespace: appprod
+spec:
+  lookupPolicy:
+    local: false
+status: {}

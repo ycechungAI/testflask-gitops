@@ -1,2 +1,2 @@
-resources:
-- 100-secret.yaml
+bases:
+  - ../../../../../services/testflask/base/config
