@@ -1,0 +1,78 @@
+kind: DeploymentConfig
+apiVersion: apps.openshift.io/v1
+metadata:
+  annotations:
+    app.openshift.io/connects-to: mysql
+  name: testflask
+  labels:
+    app: testflask
+    app.kubernetes.io/part-of: testflask
+spec:
+  strategy:
+    type: Rolling
+    rollingParams:
+      updatePeriodSeconds: 1
+      intervalSeconds: 1
+      timeoutSeconds: 600
+      maxUnavailable: 25%
+      maxSurge: 25%
+    resources: {}
+    activeDeadlineSeconds: 21600
+  triggers:
+    - type: ConfigChange
+    - type: ImageChange
+      imageChangeParams:
+        automatic: true
+        containerNames:
+          - testflask
+        from:
+          kind: ImageStreamTag
+          namespace: appprod
+          name: "testflask:latest"
+  replicas: 1
+  revisionHistoryLimit: 10
+  test: false
+  selector:
+    app: testflask
+    deploymentconfig: testflask
+  template:
+    metadata:
+      labels:
+        app: testflask
+        deploymentconfig: testflask
+    spec:
+      containers:
+        - name: testflask
+          image: >-
+            image-registry.openshift-image-registry.svc:5000/appprod/testflask@sha256:965c8758485e3a7dc8f6b1426de025ccf19229fb2af8790ff0e875e475000ede
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+          env:
+            - name: APP_CONFIG
+              value: gunicorn.conf.py
+            - name: APP_MODULE
+              value: "testapp:app"
+            - name: MYSQL_DATABASE
+              value: testdb
+            - name: MYSQL_HOST
+              value: mysql
+            - name: MYSQL_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: my-secret
+                  key: MYSQL_PASSWORD
+            - name: MYSQL_USER
+              valueFrom:
+                secretKeyRef:
+                  name: my-secret
+                  key: MYSQL_USER
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          imagePullPolicy: Always
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30
+      dnsPolicy: ClusterFirst
+      securityContext: {}
+      schedulerName: default-scheduler
