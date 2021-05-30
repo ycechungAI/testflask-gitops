@@ -4,7 +4,7 @@ metadata:
   creationTimestamp: null
   labels:
     app.kubernetes.io/name: testflask
-  name: appprod-testflask-app
+  name: appprod-app-testflask
   namespace: openshift-gitops
 spec:
   destination:

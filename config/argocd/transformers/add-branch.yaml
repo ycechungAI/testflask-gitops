@@ -1,0 +1,10 @@
+#Tries to
+apiVersion: builtin
+kind: ValueAddTransformer
+metadata:
+  name: branchAdd
+value: main
+targets:
+  - selector:
+      kind: Application
+    fieldPath: spec/source/targetRevision/
