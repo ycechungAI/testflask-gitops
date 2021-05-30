@@ -4,5 +4,6 @@ resources:
   - appdev-env.yaml
   - appprod-env.yaml
   - appprod-app-testflask.yaml
+# To edit Branch change value in below file.
 transformers:
   - ./transformers/add-branch.yaml
