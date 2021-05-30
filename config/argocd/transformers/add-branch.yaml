@@ -3,7 +3,7 @@ apiVersion: builtin
 kind: ValueAddTransformer
 metadata:
   name: branchAdd
-value: main
+value: working
 targets:
   - selector:
       kind: Application
