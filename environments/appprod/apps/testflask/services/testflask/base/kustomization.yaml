@@ -1,2 +1,2 @@
 bases:
-  - ../../../../../services/testflask/base/config
+  - ../../../../../../../services/testflask/base/config
