@@ -4,7 +4,6 @@ metadata:
   labels:
     app: testflask
   name: testflask
-  namespace: appprod
 spec:
   lookupPolicy:
     local: false

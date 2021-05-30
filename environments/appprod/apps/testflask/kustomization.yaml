@@ -3,3 +3,6 @@ bases:
 commonLabels:
   app.openshift.io/vcs-source: MoOyeg/testflask-gitops
   namespace: appprod
+namespace: appprod
+patchesStrategicMerge:
+  - patch-is.yaml

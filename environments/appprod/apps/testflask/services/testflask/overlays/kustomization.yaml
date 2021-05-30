@@ -1,5 +1,2 @@
 bases:
   - ../base
-namespace: appprod
-patchesStrategicMerge:
-  - patch-is.yaml
