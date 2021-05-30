@@ -27,7 +27,6 @@ spec:
           - testflask
         from:
           kind: ImageStreamTag
-          namespace: appprod
           name: "testflask:latest"
   replicas: 1
   revisionHistoryLimit: 10
@@ -43,8 +42,7 @@ spec:
     spec:
       containers:
         - name: testflask
-          image: >-
-            image-registry.openshift-image-registry.svc:5000/appprod/testflask@sha256:965c8758485e3a7dc8f6b1426de025ccf19229fb2af8790ff0e875e475000ede
+          image: testflask:latest
           ports:
             - containerPort: 8080
               protocol: TCP
