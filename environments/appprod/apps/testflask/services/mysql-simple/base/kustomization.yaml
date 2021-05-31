@@ -1,2 +1,2 @@
 bases:
-  - ../../../../../../../services/mysql/base/config
+  - ../../../../../../../services/mysql-simple/base/config
