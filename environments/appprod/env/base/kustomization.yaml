@@ -1,3 +1,5 @@
 resources:
-- appprod-environment.yaml
-- appprod-rolebinding.yaml
+  - appprod-environment.yaml
+  - appprod-rolebinding.yaml
+  - mysql-secret.yaml
+namespace: appprod

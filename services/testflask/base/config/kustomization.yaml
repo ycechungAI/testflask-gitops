@@ -1,0 +1,6 @@
+resources:
+  - 200-imagestream.yaml
+  - 300-buildconfig.yaml
+  - 400-deployment.yaml
+  - 500-service.yaml
+  - 600-route.yaml

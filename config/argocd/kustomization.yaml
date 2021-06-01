@@ -3,4 +3,8 @@ resources:
   - testFlask-cicd-app.yaml
   - appdev-env.yaml
   - appprod-env.yaml
-  - appprod-env-testflask-app.yaml
+  - appprod-app-testflask.yaml
+  - sealedsecret-env.yaml
+# To edit Branch change value in below file.
+transformers:
+  - ./transformers/add-branch.yaml

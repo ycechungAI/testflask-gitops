@@ -1,3 +1,5 @@
 resources:
-- appdev-environment.yaml
-- appdev-rolebinding.yaml
+  - appdev-environment.yaml
+  - appdev-rolebinding.yaml
+  - mysql-secret.yaml
+namespace: appdev

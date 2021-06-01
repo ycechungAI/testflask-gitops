@@ -1,4 +1,5 @@
 bases:
-- overlays
+  - overlays
 commonLabels:
   app.openshift.io/vcs-source: MoOyeg/testflask-gitops
+  namespace: appprod
