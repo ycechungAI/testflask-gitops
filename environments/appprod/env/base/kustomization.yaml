@@ -1,3 +1,8 @@
 resources:
-- appprod-environment.yaml
-- appprod-rolebinding.yaml
+  - appprod-environment.yaml
+  - appprod-rolebinding.yaml
+  - appprod-sealedsecret-namespace.yaml
+  - appprod-sealedsecret-catalogsource.yaml
+  - appprod-sealedsecret-operatorgroup.yaml
+  - appprod-sealedsecret-subscription.yaml
+  - appprod-sealedsecret-mastersecret.yaml
