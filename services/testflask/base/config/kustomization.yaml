@@ -1,5 +1,4 @@
 resources:
-  - 100-secret.yaml
   - 200-imagestream.yaml
   - 300-buildconfig.yaml
   - 400-deployment.yaml
