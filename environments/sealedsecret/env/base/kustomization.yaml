@@ -4,3 +4,4 @@ resources:
   - 300-sealedsecret-operatorgroup.yaml
   - 400-sealedsecret-subscription.yaml
   - 500-sealedsecret-mastersecret.yaml
+  - 600-sealedsecret-controller.yaml
