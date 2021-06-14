@@ -1,5 +1,7 @@
 resources:
   - 100-sealedsecret-namespace.yaml
+  - 100-sealedsecret-role-workaround.yaml
+  - 100-sealedsecret-rolebinding-workaround.yaml
   - 200-sealedsecret-catalogsource.yaml
   - 300-sealedsecret-operatorgroup.yaml
   - 400-sealedsecret-subscription.yaml
