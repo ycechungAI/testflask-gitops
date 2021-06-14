@@ -20,7 +20,12 @@ Sealed Secrets Operator: https://github.com/bitnami-labs/sealed-secrets<br/>
   - ```curl https://raw.githubusercontent.com/MoOyeg/testflask-gitops/main/sealedsecret-mastersecret.yaml | sed 's/namespace: sealed-secrets/namespace: "'"$NAMESPACE"'"/' | oc apply -f - -n $NAMESPACE```
   - ``` git clone https://github.com/redhat-canada-gitops/catalog.git /tmp/catalog```
   - ``` sed -i 's/namespace: sealed-secrets/namespace: "'"$NAMESPACE"'"/g' /tmp/catalog/sealed-secrets-operator/overlays/default/kustomization.yaml```
-  - ```oc apply -k /tmp/catalog/sealed-secrets-operator/overlays/default/```
+  - ```oc apply -k /tmp/catalog/sealed-secrets-operator/overlays/default/```<br/>
+  
+3 If using the Sealed Secrets Option, create the demo master key<br/>
+  - ```export NAMESPACE="sealed-secrets"```<br/>
+  - ```oc create -f https://raw.githubusercontent.com/MoOyeg/testflask-gitops/main/sealedsecret-mastersecret.yaml -n $NAMESPACE```<br/>
+
 
 Application will show how we can use ArgoCD to deploy/test a flask application running on openshift and test a Tekton Pipeline with it, the Application being used is [testFlask](https://github.com/MoOyeg/testFlask.git)<br/>
 This repo leverages sealed secret as mentioned earlier. I have included a sample private key to demo how sealed secrets can be stored in git and decrypted at runtime.Please do not store private keys in git.<br/>
