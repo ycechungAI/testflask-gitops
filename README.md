@@ -24,7 +24,7 @@ Sealed Secrets Operator: https://github.com/bitnami-labs/sealed-secrets<br/>
   
 3 If using the Sealed Secrets Option, create the demo master key<br/>
   - ```export NAMESPACE="sealed-secrets"```<br/>
-  - ```curl https://raw.githubusercontent.com/MoOyeg/testflask-gitops/main/sealedsecret-mastersecret.yaml | oc create -f - -n $NAMESPACE```<br/>
+  - ```curl https://raw.githubusercontent.com/MoOyeg/testflask-gitops/main/sealedsecret-mastersecret.yaml | oc apply -n $NAMESPACE -f - ```<br/>
 
 
 Application will show how we can use ArgoCD to deploy/test a flask application running on openshift and test a Tekton Pipeline with it, the Application being used is [testFlask](https://github.com/MoOyeg/testFlask.git)<br/>
