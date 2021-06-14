@@ -1,10 +1,10 @@
 resources:
-        #  - testFlask-argo-app.yaml
-        #  - testFlask-cicd-app.yaml
-        #  - appdev-env.yaml
-        #  - appprod-env.yaml
-        #  - appprod-app-testflask.yaml
-  - sealedsecret-env.yaml
+  - testFlask-argo-app.yaml
+  - testFlask-cicd-app.yaml
+  - appdev-env.yaml
+  - appprod-env.yaml
+  - appprod-app-testflask.yaml
+#  - sealedsecret-env.yaml
 # To edit Branch change value in below file.
 transformers:
   - ./transformers/add-branch.yaml
