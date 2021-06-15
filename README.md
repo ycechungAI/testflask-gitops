@@ -26,9 +26,9 @@ Pipeline requires a default storage class.
   
 3 If using the Sealed Secrets Option, create the demo master key and RoleBinding for ArgoCD on namespace<br/>
   - ```export NAMESPACE="sealed-secrets"```<br/>
-  - ```curl https://raw.githubusercontent.com/MoOyeg/testflask-gitops/main/environments/sealedsecret/env/base/100-sealedsecret-role-workaround.yaml | sed 's/namespace: seamespace: "'"$NAMESPACE"'"/' | oc apply -n $NAMESPACE -f -```
-  - ```curl https://raw.githubusercontent.com/MoOyeg/testflask-gitops/main/environments/sealedsecret/env/base/100-sealedsecret-rolebinding-workaround.yaml | sed 's/namespace: seamespace: "'"$NAMESPACE"'"/' | oc apply -n $NAMESPACE -f -```
-  - ```curl https://raw.githubusercontent.com/MoOyeg/testflask-gitops/main/environments/sealedsecret/env/base/500-sealedsecret-mastersecret.yaml | sed 's/namespace: seamespace: "'"$NAMESPACE"'"/' | oc apply -n $NAMESPACE -f - ```<br/>
+  - ```curl https://raw.githubusercontent.com/MoOyeg/testflask-gitops/main/environments/sealedsecret/env/base/100-sealedsecret-role-workaround.yaml | sed 's/namespace: sealed-secrets/namespace: "'"$NAMESPACE"'"/' | oc apply -n $NAMESPACE -f -```
+  - ```curl https://raw.githubusercontent.com/MoOyeg/testflask-gitops/main/environments/sealedsecret/env/base/100-sealedsecret-rolebinding-workaround.yaml | sed 's/namespace: sealed-secrets/namespace: "'"$NAMESPACE"'"/' | oc apply -n $NAMESPACE -f -```
+  - ```curl https://raw.githubusercontent.com/MoOyeg/testflask-gitops/main/environments/sealedsecret/env/base/500-sealedsecret-mastersecret.yaml | sed 's/namespace: sealed-secrets/namespace: "'"$NAMESPACE"'"/' | oc apply -n $NAMESPACE -f - ```<br/>
 
 
 Application will show how we can use ArgoCD to deploy/test a flask application running on openshift and test a Tekton Pipeline with it, the Application being used is [testFlask](https://github.com/MoOyeg/testFlask.git)<br/>
