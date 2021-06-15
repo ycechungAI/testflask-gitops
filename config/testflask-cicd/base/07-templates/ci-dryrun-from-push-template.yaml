@@ -3,7 +3,7 @@ kind: TriggerTemplate
 metadata:
   creationTimestamp: null
   name: ci-dryrun-from-push-template
-  namespace: test-cicd
+  namespace: testflask-cicd
 spec:
   params:
   - default: master

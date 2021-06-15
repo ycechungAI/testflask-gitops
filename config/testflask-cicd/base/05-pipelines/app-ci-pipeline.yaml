@@ -3,7 +3,7 @@ kind: Pipeline
 metadata:
   creationTimestamp: null
   name: app-ci-pipeline
-  namespace: test-cicd
+  namespace: testflask-cicd
 spec:
   params:
   - name: REPO
