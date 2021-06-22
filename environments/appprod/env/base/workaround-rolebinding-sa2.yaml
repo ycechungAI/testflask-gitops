@@ -1,0 +1,13 @@
+#Adding to address this bug https://access.redhat.com/solutions/6012601
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: argocd-workaround-sa2-993-rolebinding
+subjects:
+- kind: ServiceAccount
+  name: openshift-gitops-argocd-application-controller
+  namespace: openshift-gitops
+roleRef:
+  kind: Role 
+  name: argocd-workaround993-role
+  apiGroup: rbac.authorization.k8s.io
