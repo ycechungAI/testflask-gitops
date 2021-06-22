@@ -8,6 +8,7 @@ resources:
   - 02-rolebindings/pipeline-service-rolebinding.yaml
   - 02-rolebindings/workaround-role.yaml
   - 02-rolebindings/workaround-rolebinding.yaml
+  - 02-rolebindings/workaround-rolebinding-sa2.yaml
   #- 03-secrets/docker-config.yaml
   - 04-tasks/deploy-from-source-task.yaml
   - 04-tasks/task-python-unittest.yaml
