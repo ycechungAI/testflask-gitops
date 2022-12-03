@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Namespace
 metadata:
   annotations:
-    app.openshift.io/vcs-uri: github.com/MoOyeg/testFlask-Gitops.git?ref=main
+    app.openshift.io/vcs-uri: github.com/ycechungAI/testFlask-Gitops.git?ref=main
   creationTimestamp: null
   name: testflask-cicd
 spec: {}

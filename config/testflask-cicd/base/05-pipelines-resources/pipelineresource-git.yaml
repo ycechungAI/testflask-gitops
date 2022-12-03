@@ -6,7 +6,7 @@ metadata:
 spec:
   params:
     - name: url
-      value: https://github.com/MoOyeg/testFlask.git
+      value: https://github.com/ycechungAI/testFlask.git
     - name: revision
       value: master
   type: git
