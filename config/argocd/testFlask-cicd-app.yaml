@@ -36,7 +36,7 @@ spec:
   project: default
   source:
     path: config/testflask-cicd/overlays
-    repoURL: https://github.com/MoOyeg/testflask-gitops.git
+    repoURL: https://github.com/ycechungAI/testflask-gitops.git
   syncPolicy:
     automated:
       prune: true
